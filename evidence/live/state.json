@@ -1,0 +1,23 @@
+{
+  "session_id": "2ce8c8dbc4f6",
+  "state": "ACTIVE",
+  "owner": "AUTOMATION",
+  "generation": 1,
+  "started_at": "2026-11-15T15:12:34.904154+00:00",
+  "last_activity": "2026-11-15T15:12:34.904154+00:00",
+  "url": "",
+  "goal": "",
+  "step": "",
+  "checkpoint": "",
+  "last_action": "",
+  "screenshot": "",
+  "intervention_reason": "",
+  "expected": "",
+  "observed": "",
+  "human_actions": [],
+  "run_id": "",
+  "mode": "",
+  "surface_session_id": "",
+  "context_id": "",
+  "page_id": ""
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "success",
+  "run_id": "621eedd086ff",
+  "outputs": {
+    "savings_balance": "$12040.00",
+    "member_name": "Marcus Chen"
+  },
+  "model_calls": 0,
+  "duration_ms": 695,
+  "evidence_dir": "evidence/replay-success"
+}

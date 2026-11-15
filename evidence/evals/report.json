@@ -1,0 +1,228 @@
+{
+  "cases": [
+    {
+      "id": "E01",
+      "scenario": "happy-path lookup",
+      "layer": "replay",
+      "expected": "success:-",
+      "actual": "success:-",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/evals/result.json",
+      "ms": 720
+    },
+    {
+      "id": "E02",
+      "scenario": "different member input",
+      "layer": "replay",
+      "expected": "success:-",
+      "actual": "success:-",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/replay-success/result.json",
+      "ms": 695
+    },
+    {
+      "id": "E03",
+      "scenario": "member not found",
+      "layer": "replay",
+      "expected": "business_outcome:MEMBER_NOT_FOUND",
+      "actual": "business_outcome:MEMBER_NOT_FOUND",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/replay-business-outcome/result.json",
+      "ms": 318
+    },
+    {
+      "id": "E04",
+      "scenario": "invalid member ID",
+      "layer": "replay",
+      "expected": "business_outcome:VALIDATION_REJECTED",
+      "actual": "business_outcome:VALIDATION_REJECTED",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/evals/result.json",
+      "ms": 338
+    },
+    {
+      "id": "E05",
+      "scenario": "savings missing",
+      "layer": "replay",
+      "expected": "business_outcome:SAVINGS_ACCOUNT_NOT_FOUND",
+      "actual": "business_outcome:SAVINGS_ACCOUNT_NOT_FOUND",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/evals/result.json",
+      "ms": 445
+    },
+    {
+      "id": "E06",
+      "scenario": "permission denied",
+      "layer": "replay",
+      "expected": "business_outcome:PERMISSION_DENIED",
+      "actual": "business_outcome:PERMISSION_DENIED",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/replay-permission/result.json",
+      "ms": 370
+    },
+    {
+      "id": "E07",
+      "scenario": "known modal recovery",
+      "layer": "replay",
+      "expected": "success:-",
+      "actual": "success:-",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/evals/result.json",
+      "ms": 737
+    },
+    {
+      "id": "E08",
+      "scenario": "transient slowness",
+      "layer": "replay",
+      "expected": "success:-",
+      "actual": "success:-",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/evals/result.json",
+      "ms": 860
+    },
+    {
+      "id": "E09",
+      "scenario": "transient backend error",
+      "layer": "replay",
+      "expected": "success:-",
+      "actual": "success:-",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/evals/result.json",
+      "ms": 724
+    },
+    {
+      "id": "E10",
+      "scenario": "session expiry",
+      "layer": "replay",
+      "expected": "failure:SESSION_LOST",
+      "actual": "failure:SESSION_LOST",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/evals/result.json",
+      "ms": 429
+    },
+    {
+      "id": "E11",
+      "scenario": "unknown modal",
+      "layer": "replay",
+      "expected": "human_required:UNKNOWN_DIALOG",
+      "actual": "human_required:UNKNOWN_DIALOG",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/evals/result.json",
+      "ms": 376
+    },
+    {
+      "id": "E12",
+      "scenario": "risky/irreversible write",
+      "layer": "policy",
+      "expected": "human+block",
+      "actual": "human=True;blocked=True",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "tests/unit/test_core.py::test_policy_blocks_irreversible_and_unknown_action"
+    },
+    {
+      "id": "E13",
+      "scenario": "duplicate chrome labels (iframe Search unique)",
+      "layer": "replay",
+      "expected": "success:-",
+      "actual": "success:-",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/evals/result.json",
+      "ms": 784
+    },
+    {
+      "id": "E14",
+      "scenario": "artifact round-trip",
+      "layer": "unit",
+      "expected": "same capability_id",
+      "actual": "lookup_savings_balance",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "tests/unit/test_core.py::test_artifact_round_trip"
+    },
+    {
+      "id": "E15",
+      "scenario": "redaction",
+      "layer": "unit",
+      "expected": "no key material",
+      "actual": "NVIDIA [REDACTED_NVIDIA_KEY] [REDACTED]",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "tests/unit/test_core.py::test_redaction_strips_keys_and_accounts"
+    },
+    {
+      "id": "E16",
+      "scenario": "policy violation",
+      "layer": "unit+integration",
+      "expected": "POLICY_VIOLATION",
+      "actual": "POLICY_VIOLATION",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "tests/integration/test_replay.py::test_policy_rejection_on_commit_route"
+    },
+    {
+      "id": "E17",
+      "scenario": "checkpoint failure",
+      "layer": "unit",
+      "expected": "POSTCONDITION_FAILED",
+      "actual": "POSTCONDITION_FAILED",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "src/zimam/checkpoints.py"
+    },
+    {
+      "id": "E18",
+      "scenario": "same-session handoff",
+      "layer": "integration",
+      "expected": "same_session+stale_rejected",
+      "actual": "{'owner_after': 'AUTOMATION', 'generation': '4', 'stale_rejected': 'true', 'same_session': 'true', 'surface_session_id': '00e48064075a', 'context_id': '0x718f74c39d90', 'page_id': '0x718f74844bf0', 'identity_before': '00e48064075a', 'identity_after': '00e48064075a'}",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/handoff/result.json"
+    },
+    {
+      "id": "E19",
+      "scenario": "stale generation rejection",
+      "layer": "unit",
+      "expected": "StaleGenerationError",
+      "actual": "raised",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "tests/integration/test_replay.py::test_stale_generation_direct"
+    },
+    {
+      "id": "E20",
+      "scenario": "tenant-B reuse",
+      "layer": "replay",
+      "expected": "success",
+      "actual": "success",
+      "ok": true,
+      "model_calls": 0,
+      "reference": "evidence/tenant-reuse/result.json",
+      "override": "harbor",
+      "ms": 759
+    }
+  ],
+  "stability_n": 20,
+  "stability_success_rate": 1.0,
+  "median_ms": 716.0,
+  "p95_ms": 784,
+  "model_calls_replay": 0,
+  "fallback_locator_events": 0,
+  "ambiguous_locator_events": 0,
+  "artifact": "evidence/capabilities/lookup_savings_balance.v1.yaml",
+  "load_ok": true,
+  "all_ok": true
+}

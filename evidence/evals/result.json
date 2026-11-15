@@ -1,0 +1,11 @@
+{
+  "kind": "success",
+  "run_id": "6a01ded6904a",
+  "outputs": {
+    "savings_balance": "$88.88",
+    "member_name": "Avery Kim"
+  },
+  "model_calls": 0,
+  "duration_ms": 784,
+  "evidence_dir": "evidence/evals"
+}

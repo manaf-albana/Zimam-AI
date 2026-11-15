@@ -1,0 +1,10 @@
+{"ts": "2026-09-09T02:42:50.553908+00:00", "type": "RUN_STARTED", "run_id": "14b4de00b02a", "mode": "REPLAY", "capability": "lookup_savings_balance"}
+{"ts": "2026-09-09T02:42:50.554108+00:00", "type": "POLICY_CHECK", "run_id": "14b4de00b02a", "allowed": true}
+{"ts": "2026-09-09T02:42:50.748880+00:00", "type": "TARGET_RESOLVED", "run_id": "14b4de00b02a", "strategy": "role+accessible_name+label+stable_attribute+frame", "candidates": 6, "score": 155, "ok": true}
+{"ts": "2026-09-09T02:42:50.749064+00:00", "type": "ACTION_STARTED", "run_id": "14b4de00b02a", "step": "s2", "action": "type"}
+{"ts": "2026-09-09T02:42:50.759777+00:00", "type": "ACTION_COMPLETED", "run_id": "14b4de00b02a", "step": "s2"}
+{"ts": "2026-09-09T02:42:50.833199+00:00", "type": "TARGET_RESOLVED", "run_id": "14b4de00b02a", "strategy": "role+accessible_name+frame", "candidates": 6, "score": 100, "ok": true}
+{"ts": "2026-09-09T02:42:50.833335+00:00", "type": "ACTION_STARTED", "run_id": "14b4de00b02a", "step": "s3", "action": "click"}
+{"ts": "2026-09-09T02:42:50.872919+00:00", "type": "ACTION_COMPLETED", "run_id": "14b4de00b02a", "step": "s3"}
+{"ts": "2026-09-09T02:42:50.917415+00:00", "type": "CHECKPOINT_PASSED", "run_id": "14b4de00b02a", "step": "s3"}
+{"ts": "2026-09-09T02:42:50.924225+00:00", "type": "BUSINESS_OUTCOME", "run_id": "14b4de00b02a", "code": "PERMISSION_DENIED"}

@@ -1,0 +1,4 @@
+{"ts": "2026-09-09T02:44:03.014672+00:00", "type": "INTERVENTION_REQUESTED", "owner": "AUTOMATION", "generation": 2, "surface_session_id": "bf1feac68141", "context_id": "0x7e2bed403b60", "page_id": "0x7e2bed4dadb0"}
+{"ts": "2026-09-09T02:44:03.014791+00:00", "type": "HUMAN_ACTION", "detail": "stale automation click attempted", "rejected": true}
+{"ts": "2026-09-09T02:44:03.014892+00:00", "type": "CONTROL_TRANSFERRED", "owner": "HUMAN", "generation": 3}
+{"ts": "2026-09-09T02:44:03.050023+00:00", "type": "AUTOMATION_RESUMED", "generation": 4}

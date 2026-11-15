@@ -1,0 +1,10 @@
+{"ts": "2026-09-09T02:42:48.530708+00:00", "type": "RUN_STARTED", "run_id": "0ce1ae76e319", "mode": "REPLAY", "capability": "lookup_savings_balance"}
+{"ts": "2026-09-09T02:42:48.530925+00:00", "type": "POLICY_CHECK", "run_id": "0ce1ae76e319", "allowed": true}
+{"ts": "2026-09-09T02:42:48.690726+00:00", "type": "TARGET_RESOLVED", "run_id": "0ce1ae76e319", "strategy": "role+accessible_name+label+stable_attribute+frame", "candidates": 6, "score": 155, "ok": true}
+{"ts": "2026-09-09T02:42:48.690864+00:00", "type": "ACTION_STARTED", "run_id": "0ce1ae76e319", "step": "s2", "action": "type"}
+{"ts": "2026-09-09T02:42:48.697160+00:00", "type": "ACTION_COMPLETED", "run_id": "0ce1ae76e319", "step": "s2"}
+{"ts": "2026-09-09T02:42:48.749601+00:00", "type": "TARGET_RESOLVED", "run_id": "0ce1ae76e319", "strategy": "role+accessible_name+frame", "candidates": 6, "score": 100, "ok": true}
+{"ts": "2026-09-09T02:42:48.749731+00:00", "type": "ACTION_STARTED", "run_id": "0ce1ae76e319", "step": "s3", "action": "click"}
+{"ts": "2026-09-09T02:42:48.805952+00:00", "type": "ACTION_COMPLETED", "run_id": "0ce1ae76e319", "step": "s3"}
+{"ts": "2026-09-09T02:42:48.845034+00:00", "type": "CHECKPOINT_PASSED", "run_id": "0ce1ae76e319", "step": "s3"}
+{"ts": "2026-09-09T02:42:48.849465+00:00", "type": "BUSINESS_OUTCOME", "run_id": "0ce1ae76e319", "code": "MEMBER_NOT_FOUND"}

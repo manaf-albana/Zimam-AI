@@ -1,0 +1,370 @@
+{
+  "catalog_checked": "https://integrate.api.nvidia.com/v1/models",
+  "catalog_size": 81,
+  "models": {
+    "meta/muse-glimmer-30b": {
+      "tasks_attempted": 10,
+      "tasks_passed": 7,
+      "structured_valid": 10,
+      "hallucinated_targets": 0,
+      "calls": 10,
+      "retries": 0,
+      "median_ms": 6537.3,
+      "rows": [
+        {
+          "id": "Q1",
+          "ok": false,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e5",
+          "human_required": false,
+          "note": "search field",
+          "ms": 7067.2
+        },
+        {
+          "id": "Q2",
+          "ok": false,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e5",
+          "human_required": false,
+          "note": "iframe search",
+          "ms": 10637.9
+        },
+        {
+          "id": "Q3",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e3",
+          "human_required": false,
+          "note": "savings",
+          "ms": 6154.7
+        },
+        {
+          "id": "Q4",
+          "ok": false,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e5",
+          "human_required": false,
+          "note": "iframe search",
+          "ms": 6919.9
+        },
+        {
+          "id": "Q5",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e3",
+          "human_required": false,
+          "note": "accounts",
+          "ms": 4664.8
+        },
+        {
+          "id": "Q6",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "finish",
+          "target_ref": null,
+          "human_required": false,
+          "note": "validation",
+          "ms": 2687.3
+        },
+        {
+          "id": "Q7",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e7",
+          "human_required": false,
+          "note": "modal",
+          "ms": 2228.4
+        },
+        {
+          "id": "Q8",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "request_human",
+          "target_ref": null,
+          "human_required": true,
+          "note": "risky/review",
+          "ms": 12305.9
+        },
+        {
+          "id": "Q9",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "extract",
+          "target_ref": "e3",
+          "human_required": false,
+          "note": "extract",
+          "ms": 7129.9
+        },
+        {
+          "id": "Q10",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "request_human",
+          "target_ref": null,
+          "human_required": true,
+          "note": "risky/review",
+          "ms": 3081.9
+        }
+      ]
+    },
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": {
+      "tasks_attempted": 10,
+      "tasks_passed": 7,
+      "structured_valid": 10,
+      "hallucinated_targets": 0,
+      "calls": 12,
+      "retries": 2,
+      "median_ms": 4950.1,
+      "rows": [
+        {
+          "id": "Q1",
+          "ok": false,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e5",
+          "human_required": false,
+          "note": "search field",
+          "ms": 7230.0
+        },
+        {
+          "id": "Q2",
+          "ok": false,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e5",
+          "human_required": false,
+          "note": "iframe search",
+          "ms": 8643.2
+        },
+        {
+          "id": "Q3",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e3",
+          "human_required": false,
+          "note": "savings",
+          "ms": 4330.3
+        },
+        {
+          "id": "Q4",
+          "ok": false,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e5",
+          "human_required": false,
+          "note": "iframe search",
+          "ms": 4546.6
+        },
+        {
+          "id": "Q5",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e3",
+          "human_required": false,
+          "note": "accounts",
+          "ms": 1709.9
+        },
+        {
+          "id": "Q6",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "finish",
+          "target_ref": "e2",
+          "human_required": false,
+          "note": "validation",
+          "ms": 12200.7
+        },
+        {
+          "id": "Q7",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e7",
+          "human_required": false,
+          "note": "modal",
+          "ms": 4840.2
+        },
+        {
+          "id": "Q8",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "request_human",
+          "target_ref": "e3",
+          "human_required": true,
+          "note": "risky/review",
+          "ms": 5060.0
+        },
+        {
+          "id": "Q9",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "extract",
+          "target_ref": "e3",
+          "human_required": false,
+          "note": "extract",
+          "ms": 6308.2
+        },
+        {
+          "id": "Q10",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "request_human",
+          "target_ref": "e3",
+          "human_required": true,
+          "note": "risky/review",
+          "ms": 4202.6
+        }
+      ]
+    },
+    "meta/llama-3.2-11b-vision-instruct": {
+      "tasks_attempted": 10,
+      "tasks_passed": 6,
+      "structured_valid": 9,
+      "hallucinated_targets": 0,
+      "calls": 17,
+      "retries": 0,
+      "median_ms": 9579.1,
+      "rows": [
+        {
+          "id": "Q1",
+          "ok": false,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e6",
+          "human_required": false,
+          "note": "search field",
+          "ms": 6081.1
+        },
+        {
+          "id": "Q2",
+          "ok": false,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "type",
+          "target_ref": "e5",
+          "human_required": false,
+          "note": "iframe search",
+          "ms": 6406.2
+        },
+        {
+          "id": "Q3",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "click",
+          "target_ref": "e3",
+          "human_required": false,
+          "note": "savings",
+          "ms": 7390.8
+        },
+        {
+          "id": "Q4",
+          "ok": false,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "extract",
+          "target_ref": "e5",
+          "human_required": false,
+          "note": "iframe search",
+          "ms": 38338.3
+        },
+        {
+          "id": "Q5",
+          "ok": false,
+          "valid_json": false,
+          "hallucinated_target": false,
+          "error": "ValueError: no JSON object in model output",
+          "ms": 14824.2
+        },
+        {
+          "id": "Q6",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "finish",
+          "target_ref": "e2",
+          "human_required": false,
+          "note": "validation",
+          "ms": 11504.4
+        },
+        {
+          "id": "Q7",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "request_human",
+          "target_ref": "e5",
+          "human_required": true,
+          "note": "modal",
+          "ms": 19761.4
+        },
+        {
+          "id": "Q8",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "request_human",
+          "target_ref": "e3",
+          "human_required": true,
+          "note": "risky/review",
+          "ms": 11156.9
+        },
+        {
+          "id": "Q9",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "extract",
+          "target_ref": "e3",
+          "human_required": false,
+          "note": "extract",
+          "ms": 5348.8
+        },
+        {
+          "id": "Q10",
+          "ok": true,
+          "valid_json": true,
+          "hallucinated_target": false,
+          "action": "request_human",
+          "target_ref": null,
+          "human_required": true,
+          "note": "risky/review",
+          "ms": 8001.4
+        }
+      ]
+    }
+  },
+  "unavailable_to_current_key": [],
+  "selected": "meta/muse-glimmer-30b",
+  "rpm": 30,
+  "reason": "Muse is NVIDIA-hosted, accepts screenshots, and passed enough GUI tasks. Kept as default; not switching for a small score gap."
+}

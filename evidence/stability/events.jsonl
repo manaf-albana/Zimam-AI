@@ -1,0 +1,23 @@
+{"ts": "2026-09-09T02:43:18.858423+00:00", "type": "RUN_STARTED", "run_id": "7537115b579f", "mode": "REPLAY", "capability": "lookup_savings_balance"}
+{"ts": "2026-09-09T02:43:18.858617+00:00", "type": "POLICY_CHECK", "run_id": "7537115b579f", "allowed": true}
+{"ts": "2026-09-09T02:43:19.033548+00:00", "type": "TARGET_RESOLVED", "run_id": "7537115b579f", "strategy": "role+accessible_name+label+stable_attribute+frame", "candidates": 6, "score": 155, "ok": true}
+{"ts": "2026-09-09T02:43:19.033662+00:00", "type": "ACTION_STARTED", "run_id": "7537115b579f", "step": "s2", "action": "type"}
+{"ts": "2026-09-09T02:43:19.041018+00:00", "type": "ACTION_COMPLETED", "run_id": "7537115b579f", "step": "s2"}
+{"ts": "2026-09-09T02:43:19.111598+00:00", "type": "TARGET_RESOLVED", "run_id": "7537115b579f", "strategy": "role+accessible_name+frame", "candidates": 6, "score": 100, "ok": true}
+{"ts": "2026-09-09T02:43:19.111709+00:00", "type": "ACTION_STARTED", "run_id": "7537115b579f", "step": "s3", "action": "click"}
+{"ts": "2026-09-09T02:43:19.157174+00:00", "type": "ACTION_COMPLETED", "run_id": "7537115b579f", "step": "s3"}
+{"ts": "2026-09-09T02:43:19.208509+00:00", "type": "CHECKPOINT_PASSED", "run_id": "7537115b579f", "step": "s3"}
+{"ts": "2026-09-09T02:43:19.248391+00:00", "type": "TARGET_RESOLVED", "run_id": "7537115b579f", "strategy": "role+accessible_name", "candidates": 4, "score": 80, "ok": true}
+{"ts": "2026-09-09T02:43:19.248512+00:00", "type": "ACTION_STARTED", "run_id": "7537115b579f", "step": "s4", "action": "click"}
+{"ts": "2026-09-09T02:43:19.275390+00:00", "type": "ACTION_COMPLETED", "run_id": "7537115b579f", "step": "s4"}
+{"ts": "2026-09-09T02:43:19.396555+00:00", "type": "TARGET_RESOLVED", "run_id": "7537115b579f", "strategy": "role+accessible_name", "candidates": 4, "score": 80, "ok": true}
+{"ts": "2026-09-09T02:43:19.396671+00:00", "type": "ACTION_STARTED", "run_id": "7537115b579f", "step": "s5", "action": "click"}
+{"ts": "2026-09-09T02:43:19.422534+00:00", "type": "ACTION_COMPLETED", "run_id": "7537115b579f", "step": "s5"}
+{"ts": "2026-09-09T02:43:19.469902+00:00", "type": "CHECKPOINT_PASSED", "run_id": "7537115b579f", "step": "s5"}
+{"ts": "2026-09-09T02:43:19.527135+00:00", "type": "TARGET_RESOLVED", "run_id": "7537115b579f", "strategy": "role+accessible_name+stable_attribute", "candidates": 5, "score": 105, "ok": true}
+{"ts": "2026-09-09T02:43:19.527245+00:00", "type": "ACTION_STARTED", "run_id": "7537115b579f", "step": "s6", "action": "extract"}
+{"ts": "2026-09-09T02:43:19.528514+00:00", "type": "ACTION_COMPLETED", "run_id": "7537115b579f", "step": "s6"}
+{"ts": "2026-09-09T02:43:19.574085+00:00", "type": "TARGET_RESOLVED", "run_id": "7537115b579f", "strategy": "role+accessible_name+stable_attribute", "candidates": 5, "score": 105, "ok": true}
+{"ts": "2026-09-09T02:43:19.574206+00:00", "type": "ACTION_STARTED", "run_id": "7537115b579f", "step": "s7", "action": "extract"}
+{"ts": "2026-09-09T02:43:19.575281+00:00", "type": "ACTION_COMPLETED", "run_id": "7537115b579f", "step": "s7"}
+{"ts": "2026-09-09T02:43:19.585630+00:00", "type": "RUN_SUCCEEDED", "run_id": "7537115b579f", "outputs": {"savings_balance": "$12040.00", "member_name": "Marcus Chen"}, "model_calls": 0}

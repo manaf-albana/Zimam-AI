@@ -1,0 +1,11 @@
+{
+  "kind": "success",
+  "run_id": "ab86d9a95356",
+  "outputs": {
+    "savings_balance": "$4218.55",
+    "member_name": "Anya Patel"
+  },
+  "model_calls": 0,
+  "duration_ms": 759,
+  "evidence_dir": "evidence/tenant-reuse"
+}

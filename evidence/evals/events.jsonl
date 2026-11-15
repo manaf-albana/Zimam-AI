@@ -1,0 +1,23 @@
+{"ts": "2026-09-09T02:42:56.035308+00:00", "type": "RUN_STARTED", "run_id": "6a01ded6904a", "mode": "REPLAY", "capability": "lookup_savings_balance"}
+{"ts": "2026-09-09T02:42:56.035523+00:00", "type": "POLICY_CHECK", "run_id": "6a01ded6904a", "allowed": true}
+{"ts": "2026-09-09T02:42:56.201994+00:00", "type": "TARGET_RESOLVED", "run_id": "6a01ded6904a", "strategy": "role+accessible_name+label+stable_attribute+frame", "candidates": 6, "score": 155, "ok": true}
+{"ts": "2026-09-09T02:42:56.202113+00:00", "type": "ACTION_STARTED", "run_id": "6a01ded6904a", "step": "s2", "action": "type"}
+{"ts": "2026-09-09T02:42:56.209506+00:00", "type": "ACTION_COMPLETED", "run_id": "6a01ded6904a", "step": "s2"}
+{"ts": "2026-09-09T02:42:56.299224+00:00", "type": "TARGET_RESOLVED", "run_id": "6a01ded6904a", "strategy": "role+accessible_name+frame", "candidates": 6, "score": 100, "ok": true}
+{"ts": "2026-09-09T02:42:56.299344+00:00", "type": "ACTION_STARTED", "run_id": "6a01ded6904a", "step": "s3", "action": "click"}
+{"ts": "2026-09-09T02:42:56.340614+00:00", "type": "ACTION_COMPLETED", "run_id": "6a01ded6904a", "step": "s3"}
+{"ts": "2026-09-09T02:42:56.405298+00:00", "type": "CHECKPOINT_PASSED", "run_id": "6a01ded6904a", "step": "s3"}
+{"ts": "2026-09-09T02:42:56.503713+00:00", "type": "TARGET_RESOLVED", "run_id": "6a01ded6904a", "strategy": "role+accessible_name", "candidates": 6, "score": 80, "ok": true}
+{"ts": "2026-09-09T02:42:56.503844+00:00", "type": "ACTION_STARTED", "run_id": "6a01ded6904a", "step": "s4", "action": "click"}
+{"ts": "2026-09-09T02:42:56.525881+00:00", "type": "ACTION_COMPLETED", "run_id": "6a01ded6904a", "step": "s4"}
+{"ts": "2026-09-09T02:42:56.601024+00:00", "type": "TARGET_RESOLVED", "run_id": "6a01ded6904a", "strategy": "role+accessible_name", "candidates": 4, "score": 80, "ok": true}
+{"ts": "2026-09-09T02:42:56.601132+00:00", "type": "ACTION_STARTED", "run_id": "6a01ded6904a", "step": "s5", "action": "click"}
+{"ts": "2026-09-09T02:42:56.625525+00:00", "type": "ACTION_COMPLETED", "run_id": "6a01ded6904a", "step": "s5"}
+{"ts": "2026-09-09T02:42:56.675373+00:00", "type": "CHECKPOINT_PASSED", "run_id": "6a01ded6904a", "step": "s5"}
+{"ts": "2026-09-09T02:42:56.725181+00:00", "type": "TARGET_RESOLVED", "run_id": "6a01ded6904a", "strategy": "role+accessible_name+stable_attribute", "candidates": 5, "score": 105, "ok": true}
+{"ts": "2026-09-09T02:42:56.725287+00:00", "type": "ACTION_STARTED", "run_id": "6a01ded6904a", "step": "s6", "action": "extract"}
+{"ts": "2026-09-09T02:42:56.726459+00:00", "type": "ACTION_COMPLETED", "run_id": "6a01ded6904a", "step": "s6"}
+{"ts": "2026-09-09T02:42:56.786856+00:00", "type": "TARGET_RESOLVED", "run_id": "6a01ded6904a", "strategy": "role+accessible_name+stable_attribute", "candidates": 5, "score": 105, "ok": true}
+{"ts": "2026-09-09T02:42:56.786987+00:00", "type": "ACTION_STARTED", "run_id": "6a01ded6904a", "step": "s7", "action": "extract"}
+{"ts": "2026-09-09T02:42:56.787966+00:00", "type": "ACTION_COMPLETED", "run_id": "6a01ded6904a", "step": "s7"}
+{"ts": "2026-09-09T02:42:56.819570+00:00", "type": "RUN_SUCCEEDED", "run_id": "6a01ded6904a", "outputs": {"savings_balance": "$88.88", "member_name": "Avery Kim"}, "model_calls": 0}

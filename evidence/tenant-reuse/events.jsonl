@@ -1,0 +1,23 @@
+{"ts": "2026-09-09T02:42:58.018741+00:00", "type": "RUN_STARTED", "run_id": "ab86d9a95356", "mode": "REPLAY", "capability": "lookup_savings_balance"}
+{"ts": "2026-09-09T02:42:58.018976+00:00", "type": "POLICY_CHECK", "run_id": "ab86d9a95356", "allowed": true}
+{"ts": "2026-09-09T02:42:58.197101+00:00", "type": "TARGET_RESOLVED", "run_id": "ab86d9a95356", "strategy": "role+accessible_name+label+stable_attribute+frame", "candidates": 6, "score": 155, "ok": true}
+{"ts": "2026-09-09T02:42:58.197230+00:00", "type": "ACTION_STARTED", "run_id": "ab86d9a95356", "step": "s2", "action": "type"}
+{"ts": "2026-09-09T02:42:58.205383+00:00", "type": "ACTION_COMPLETED", "run_id": "ab86d9a95356", "step": "s2"}
+{"ts": "2026-09-09T02:42:58.266182+00:00", "type": "TARGET_RESOLVED", "run_id": "ab86d9a95356", "strategy": "role+accessible_name+frame", "candidates": 6, "score": 100, "ok": true}
+{"ts": "2026-09-09T02:42:58.266323+00:00", "type": "ACTION_STARTED", "run_id": "ab86d9a95356", "step": "s3", "action": "click"}
+{"ts": "2026-09-09T02:42:58.305355+00:00", "type": "ACTION_COMPLETED", "run_id": "ab86d9a95356", "step": "s3"}
+{"ts": "2026-09-09T02:42:58.355991+00:00", "type": "CHECKPOINT_PASSED", "run_id": "ab86d9a95356", "step": "s3"}
+{"ts": "2026-09-09T02:42:58.410786+00:00", "type": "TARGET_RESOLVED", "run_id": "ab86d9a95356", "strategy": "role+accessible_name", "candidates": 4, "score": 80, "ok": true}
+{"ts": "2026-09-09T02:42:58.410910+00:00", "type": "ACTION_STARTED", "run_id": "ab86d9a95356", "step": "s4", "action": "click"}
+{"ts": "2026-09-09T02:42:58.443865+00:00", "type": "ACTION_COMPLETED", "run_id": "ab86d9a95356", "step": "s4"}
+{"ts": "2026-09-09T02:42:58.546532+00:00", "type": "TARGET_RESOLVED", "run_id": "ab86d9a95356", "strategy": "role+accessible_name", "candidates": 4, "score": 80, "ok": true}
+{"ts": "2026-09-09T02:42:58.546686+00:00", "type": "ACTION_STARTED", "run_id": "ab86d9a95356", "step": "s5", "action": "click"}
+{"ts": "2026-09-09T02:42:58.576797+00:00", "type": "ACTION_COMPLETED", "run_id": "ab86d9a95356", "step": "s5"}
+{"ts": "2026-09-09T02:42:58.633706+00:00", "type": "CHECKPOINT_PASSED", "run_id": "ab86d9a95356", "step": "s5"}
+{"ts": "2026-09-09T02:42:58.709495+00:00", "type": "TARGET_RESOLVED", "run_id": "ab86d9a95356", "strategy": "role+accessible_name+stable_attribute", "candidates": 5, "score": 105, "ok": true}
+{"ts": "2026-09-09T02:42:58.709615+00:00", "type": "ACTION_STARTED", "run_id": "ab86d9a95356", "step": "s6", "action": "extract"}
+{"ts": "2026-09-09T02:42:58.711915+00:00", "type": "ACTION_COMPLETED", "run_id": "ab86d9a95356", "step": "s6"}
+{"ts": "2026-09-09T02:42:58.751961+00:00", "type": "TARGET_RESOLVED", "run_id": "ab86d9a95356", "strategy": "role+accessible_name+stable_attribute", "candidates": 5, "score": 105, "ok": true}
+{"ts": "2026-09-09T02:42:58.752086+00:00", "type": "ACTION_STARTED", "run_id": "ab86d9a95356", "step": "s7", "action": "extract"}
+{"ts": "2026-09-09T02:42:58.753087+00:00", "type": "ACTION_COMPLETED", "run_id": "ab86d9a95356", "step": "s7"}
+{"ts": "2026-09-09T02:42:58.778288+00:00", "type": "RUN_SUCCEEDED", "run_id": "ab86d9a95356", "outputs": {"savings_balance": "$4218.55", "member_name": "Anya Patel"}, "model_calls": 0}

@@ -1,0 +1,148 @@
+schema_version: '1.0'
+capability_id: lookup_savings_balance
+capability_version: '1'
+name: Lookup savings balance
+description: Look up a member and return the current savings balance.
+target_app: Meridian MemberServ
+vendor: Meridian
+product: MemberServ
+compatibility:
+  vendor: Meridian
+  product: MemberServ
+  version_range: '>=demo-1'
+  required_features:
+  - member-search
+  - accounts-table
+  tenants:
+  - pine
+  - harbor
+risk: READ
+inputs:
+- name: member_id
+  type: string
+  required: true
+  description: Five-digit member id
+outputs:
+- name: savings_balance
+  type: money
+  required: true
+  description: ''
+- name: member_name
+  type: string
+  required: false
+  description: ''
+steps:
+- step_id: s1
+  timeout_ms: 8000
+  effect: READ
+  safe_to_repeat: true
+  action: navigate
+  url_template: '{base_url}/pine/'
+- step_id: s2
+  timeout_ms: 8000
+  effect: READ
+  safe_to_repeat: true
+  action: type
+  target:
+    role: textbox
+    accessible_name: Member Number
+    label: Member Number
+    frame: member-search-frame
+    stable_attributes:
+      name: member_id
+      id: member_id
+  value_source: input:member_id
+- step_id: s3
+  postcondition:
+    mode: any
+    predicates:
+    - kind: route_matches
+      pattern: /member/
+    - kind: text_present
+      text: Member not found
+    - kind: text_present
+      text: Invalid member
+    - kind: text_present
+      text: You do not have permission
+    - kind: text_present
+      text: session has expired
+    - kind: text_present
+      text: Application error
+    - kind: text_present
+      text: Temporarily unavailable
+    - kind: text_present
+      text: Scheduled maintenance
+    timeout_ms: 8000
+  timeout_ms: 8000
+  effect: READ
+  safe_to_repeat: true
+  action: click
+  target:
+    role: button
+    accessible_name: Search
+    frame: member-search-frame
+- step_id: s4
+  timeout_ms: 8000
+  effect: READ
+  safe_to_repeat: true
+  action: click
+  target:
+    role: link
+    accessible_name: Accounts
+- step_id: s5
+  postcondition:
+    mode: any
+    predicates:
+    - kind: route_matches
+      pattern: savings
+    - kind: text_present
+      text: No savings account
+    timeout_ms: 8000
+  timeout_ms: 8000
+  effect: READ
+  safe_to_repeat: true
+  action: click
+  target:
+    role: link
+    accessible_name: Savings
+- step_id: s6
+  timeout_ms: 8000
+  effect: READ
+  safe_to_repeat: true
+  action: extract
+  target:
+    role: status
+    accessible_name: Current balance
+    stable_attributes:
+      data-extract: savings_balance
+  output_key: savings_balance
+- step_id: s7
+  timeout_ms: 8000
+  effect: READ
+  safe_to_repeat: true
+  action: extract
+  target:
+    role: status
+    accessible_name: Member name
+    stable_attributes:
+      data-extract: member_name
+  output_key: member_name
+final_checkpoint:
+  mode: all
+  predicates:
+  - kind: text_present
+    text: Current balance
+  - kind: route_matches
+    pattern: savings
+  timeout_ms: 8000
+known_outcomes:
+- code: MEMBER_NOT_FOUND
+  detect_text: Member not found
+- code: SAVINGS_ACCOUNT_NOT_FOUND
+  detect_text: No savings account
+- code: VALIDATION_REJECTED
+  detect_text: Invalid member
+- code: PERMISSION_DENIED
+  detect_text: You do not have permission
+approval_status: approved
+created_by: CapabilityCompiler

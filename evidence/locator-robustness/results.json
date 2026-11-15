@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "id": "baseline",
+      "ok": true,
+      "reason": "unique semantic match"
+    },
+    {
+      "id": "A-D wrap/order/css/branding",
+      "ok": true,
+      "reason": "unique semantic match",
+      "expected": "survive"
+    },
+    {
+      "id": "E duplicate Search",
+      "ok": false,
+      "ambiguous": true,
+      "reason": "ambiguous: winner 100 vs second 100",
+      "expected": "TARGET_AMBIGUOUS"
+    },
+    {
+      "id": "F semantic label change",
+      "ok": false,
+      "reason": "winner score 60 below threshold 70",
+      "expected": "fail without override"
+    },
+    {
+      "id": "F-override harbor label",
+      "ok": true,
+      "reason": "unique semantic match",
+      "expected": "survive with tenant override descriptor"
+    }
+  ]
+}

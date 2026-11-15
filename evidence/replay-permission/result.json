@@ -1,0 +1,10 @@
+{
+  "kind": "business_outcome",
+  "run_id": "14b4de00b02a",
+  "code": "PERMISSION_DENIED",
+  "message": "PERMISSION_DENIED",
+  "outputs": {},
+  "model_calls": 0,
+  "duration_ms": 370,
+  "evidence_dir": null
+}
