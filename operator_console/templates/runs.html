@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block main %}
+<header class="page">
+  <h1>Runs</h1>
+  <p class="lede">Execution history</p>
+</header>
+{% if not events %}
+  <div class="empty">No events recorded yet.</div>
+{% else %}
+  <ol class="timeline">
+    {% for ev in events %}
+      <li>
+        <span class="t">{{ ev.type }}</span>
+        <span class="d">{{ ev.ts }}</span>
+        <span class="m">{% if ev.mode %}{{ ev.mode }} {% endif %}{% if ev.capability %}{{ ev.capability }} {% endif %}{% if ev.action %}{{ ev.action }} {% endif %}{% if ev.code %}{{ ev.code }} {% endif %}{% if ev.url %}{{ ev.url }}{% endif %}</span>
+      </li>
+    {% endfor %}
+  </ol>
+{% endif %}
+{% endblock %}

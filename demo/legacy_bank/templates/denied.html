@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Permission denied</h1>
+<p>You do not have permission to view member {{ member_id }}.</p>
+<p><a href="/{{ tenant.id }}/">Return to search</a></p>
+{% endblock %}

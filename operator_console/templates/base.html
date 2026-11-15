@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MemberServ operator</title>
+  <link rel="stylesheet" href="/console/static/console.css">
+</head>
+<body>
+  <aside>
+    <div class="mark">MemberServ</div>
+    <div class="mark-sub">Operator console</div>
+    <nav>
+      <a href="/console/live" class="{% if nav=='live' %}on{% endif %}">Live session</a>
+      <a href="/console/interventions" class="{% if nav=='interventions' %}on{% endif %}">Interventions</a>
+      <a href="/console/capabilities" class="{% if nav=='capabilities' %}on{% endif %}">Capabilities</a>
+      <a href="/console/runs" class="{% if nav=='runs' %}on{% endif %}">Runs</a>
+      <a href="/console/evals" class="{% if nav=='evals' %}on{% endif %}">Evals</a>
+    </nav>
+  </aside>
+  <main>
+    {% block main %}{% endblock %}
+  </main>
+</body>
+</html>

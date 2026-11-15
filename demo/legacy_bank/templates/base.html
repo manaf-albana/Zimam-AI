@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ tenant.product }} — {{ tenant.short }}</title>
+  <link rel="stylesheet" href="/static/bank.css">
+</head>
+<body class="theme-{{ tenant.theme }}">
+  <table class="shell" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="banner">
+        <div class="brand">{{ tenant.name }}</div>
+        <div class="product">{{ tenant.product }} v4.3.2 &nbsp;|&nbsp; Core Host 12c</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="nav">
+        <a href="/{{ tenant.id }}/">Member Search</a>
+        &nbsp;|&nbsp; Reports &nbsp;|&nbsp; Batch &nbsp;|&nbsp; Admin
+        <span class="right">Operator: DEMO &nbsp; Session: 14:02</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="body">{% block body %}{% endblock %}</td>
+    </tr>
+    <tr>
+      <td class="foot">{{ tenant.footer }} &nbsp; Last posted {{ now }}. Not a real financial system.</td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block main %}
+<header class="page">
+  <h1>Live session</h1>
+  <p class="lede">The Chromium session currently used by the automation. Take control to operate it manually, then resume when you're done.</p>
+</header>
+{% if not rec %}
+  <div class="empty">No live session. Start discovery or replay from the CLI.</div>
+{% else %}
+  <section class="grid">
+    <figure class="shot">
+      {% if rec.screenshot %}
+        <img src="/console/api/screenshot" alt="Current page screenshot">
+      {% else %}
+        <div class="empty">Screenshot not yet captured.</div>
+      {% endif %}
+    </figure>
+    <dl class="facts">
+      <div><dt>Goal</dt><dd>{{ rec.goal or "—" }}</dd></div>
+      <div><dt>URL</dt><dd class="mono">{{ rec.url or "—" }}</dd></div>
+      <div><dt>Step</dt><dd>{{ rec.step or "—" }}</dd></div>
+      <div><dt>Owner</dt><dd><span class="pill {{ rec.owner|lower }}">{{ rec.owner }}</span> gen {{ rec.generation }}</dd></div>
+      <div><dt>Checkpoint</dt><dd>{{ rec.checkpoint or "—" }}</dd></div>
+      <div><dt>Last action</dt><dd>{{ rec.last_action or "—" }}</dd></div>
+      <div><dt>Surface</dt><dd class="mono">{{ rec.surface_session_id or "—" }}</dd></div>
+    </dl>
+  </section>
+  <div class="actions">
+    <form method="post" action="/console/api/take-control">
+      <button type="submit" {% if rec.owner == 'HUMAN' %}disabled{% endif %}>Take control</button>
+    </form>
+    <form method="post" action="/console/api/resume">
+      <button class="primary" type="submit" {% if rec.owner != 'HUMAN' %}disabled{% endif %}>Resume automation</button>
+    </form>
+  </div>
+{% endif %}
+<script>
+  setTimeout(() => location.reload(), 2500);
+</script>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block main %}
+<header class="page">
+  <h1>Intervention</h1>
+  <p class="lede">Automation paused. Take the live Chromium window, then resume.</p>
+</header>
+{% if rec and rec.state == 'PAUSED_FOR_HUMAN' %}
+  <p><b>Reason.</b> {{ rec.intervention_reason or "—" }}</p>
+  <p><b>Expected.</b> {{ rec.expected or "—" }}</p>
+  <p><b>Observed.</b> {{ rec.observed or "—" }}</p>
+  <p><b>Owner.</b> <span class="pill {{ rec.owner|lower }}">{{ rec.owner }}</span> gen {{ rec.generation }}</p>
+  <div class="actions">
+    <form method="post" action="/console/api/take-control">
+      <button type="submit" {% if rec.owner == 'HUMAN' %}disabled{% endif %}>Take control</button>
+    </form>
+    <form method="post" action="/console/api/resume">
+      <button class="primary" type="submit" {% if rec.owner != 'HUMAN' %}disabled{% endif %}>Resume automation</button>
+    </form>
+  </div>
+{% else %}
+  <div class="empty">No open intervention. Risky or unknown states land here.</div>
+{% endif %}
+{% endblock %}

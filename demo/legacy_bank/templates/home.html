@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block body %}
+<table class="layout" width="100%">
+  <tr>
+    <td class="sidebar" width="180">
+      <b>Quick links</b>
+      <ul>
+        <li>Intraday holds</li>
+        <li>Share draft exceptions</li>
+        <li>Card disputes</li>
+      </ul>
+      <p class="hint">Search lives in the frame. Duplicate chrome search is decorative.</p>
+      <form onsubmit="return false;">
+        <label>Quick find</label><br>
+        <input type="text" name="q" size="12">
+        <button type="button">Search</button>
+      </form>
+    </td>
+    <td class="main">
+      <h1>Member lookup</h1>
+      <p>Look up a membership, then open Accounts to read share balances.</p>
+      <iframe
+        name="{{ tenant.frame_name }}"
+        title="{{ tenant.member_label }} search"
+        src="/{{ tenant.id }}/search-frame"
+        width="520"
+        height="160"
+        class="search-frame"></iframe>
+      <p class="hint">Hosted in frame <code>{{ tenant.frame_name }}</code>.</p>
+    </td>
+    <td class="rail" width="200">
+      <b>Notices</b>
+      <table border="1" cellpadding="4" class="nested">
+        <tr><td>ACH window closes 4pm</td></tr>
+        <tr><td>Core recycle Sunday 02:00</td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+{% endblock %}

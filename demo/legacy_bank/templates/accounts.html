@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Accounts</h1>
+<p>Member: {{ member.name }} ({{ member.member_id }})</p>
+<table border="1" cellpadding="4" class="nested">
+  <tr><th>Type</th><th>Account</th><th>Balance</th><th></th></tr>
+  {% for acct in member.accounts %}
+  <tr>
+    <td>{{ acct.type }}</td>
+    <td>{{ acct.number_masked }}</td>
+    <td>{% if acct.balance %}${{ acct.balance }}{% else %}—{% endif %}</td>
+    <td>
+      {% if acct.type == "savings" %}
+        <a href="/{{ tenant.id }}/member/{{ member.member_id }}/accounts/savings" aria-label="Savings">Savings</a>
+      {% else %}
+        <span>Checking</span>
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% set savings_count = namespace(n=0) %}
+{% for acct in member.accounts %}
+  {% if acct.type == "savings" %}{% set savings_count.n = savings_count.n + 1 %}{% endif %}
+{% endfor %}
+{% if savings_count.n == 0 %}
+<p>No savings account is present on this membership.</p>
+{% endif %}
+<p><a href="/{{ tenant.id }}/member/{{ member.member_id }}">Back to profile</a></p>
+{% endblock %}

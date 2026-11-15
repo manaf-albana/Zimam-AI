@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Savings</h1>
+<p>Member: <span role="status" aria-label="Member name" data-extract="member_name">{{ member.name }}</span></p>
+<table border="1" cellpadding="8" class="nested">
+  <tr>
+    <th>Share ID</th>
+    <td>{{ account.number_masked }}</td>
+  </tr>
+  <tr>
+    <th><label for="current-balance">Current balance</label></th>
+    <td>
+      <span id="current-balance" role="status" class="balance" data-account-type="savings" data-extract="savings_balance" aria-label="Current balance">
+        ${{ account.balance }}
+      </span>
+    </td>
+  </tr>
+</table>
+<p><a href="/{{ tenant.id }}/member/{{ member.member_id }}/accounts">Back to accounts</a></p>
+{% endblock %}

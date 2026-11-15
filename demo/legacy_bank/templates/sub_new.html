@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Open sub-account</h1>
+<p>Member: {{ member.name }}</p>
+<form method="post" action="/{{ tenant.id }}/member/{{ member.member_id }}/sub-account/review">
+  <label for="product">Product</label>
+  <select id="product" name="product" aria-label="Product">
+    <option>Money market</option>
+    <option>Share certificate</option>
+  </select>
+  <p><button type="submit">Review</button></p>
+</form>
+{% endblock %}

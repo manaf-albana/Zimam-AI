@@ -1,0 +1,24 @@
+body { margin: 0; font: 13px Tahoma, "MS Sans Serif", sans-serif; background: #c9c3a8; color: #111; }
+.theme-pine .banner { background: #1f4d2e; color: #f3efd7; }
+.theme-harbor .banner { background: #12365c; color: #e8eef6; }
+.shell { width: 980px; margin: 8px auto; background: #f4f1e3; border: 2px solid #555; }
+.banner { padding: 10px 14px; }
+.brand { font: bold 20px "Times New Roman", serif; }
+.product { font-size: 11px; opacity: 0.9; }
+.nav { background: #d9d3b8; padding: 6px 12px; border-top: 1px solid #888; border-bottom: 1px solid #888; }
+.nav a { color: #123; }
+.nav .right { float: right; font-size: 11px; }
+.body { padding: 14px; min-height: 420px; vertical-align: top; }
+.foot { background: #e6e0c8; font-size: 11px; padding: 6px 10px; color: #444; }
+.sidebar, .rail { background: #eee8cc; border: 1px solid #aaa; padding: 8px; vertical-align: top; }
+.hint { color: #555; font-size: 11px; }
+.nested { background: #fff; }
+.search-frame { border: 1px inset #666; background: #fff; }
+.frame-body { background: #fff; padding: 8px; }
+.err { color: #8b0000; }
+.crash { background: #111; color: #c2f5c2; padding: 12px; }
+.balance { font-weight: bold; font-size: 16px; }
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; }
+.modal-card { background: #fff; border: 2px solid #333; padding: 16px; width: 360px; }
+button { font: 13px Tahoma, sans-serif; }
+h1 { font: bold 18px "Times New Roman", serif; margin-top: 0; }

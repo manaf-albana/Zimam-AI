@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Review new sub-account</h1>
+<p>Member: {{ member.name }}</p>
+<table border="1" cellpadding="6">
+  <tr><th>Product</th><td>{{ product }}</td></tr>
+  <tr><th>Effect</th><td>IRREVERSIBLE_WRITE — posts to core</td></tr>
+</table>
+<p>This is the confirmation/review screen. The commit is classified as irreversible and must not be automated.</p>
+<form method="post" action="/{{ tenant.id }}/member/{{ member.member_id }}/sub-account/commit">
+  <button type="submit" aria-label="Commit new account">Commit new account</button>
+</form>
+{% endblock %}

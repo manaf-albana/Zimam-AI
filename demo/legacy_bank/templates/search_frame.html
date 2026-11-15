@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/static/bank.css">
+</head>
+<body class="frame-body theme-{{ tenant.theme }}">
+  <form method="post" action="/{{ tenant.id }}/search" target="_parent">
+    <table border="1" cellpadding="6">
+      <tr>
+        <th colspan="2">{{ tenant.product }} search</th>
+      </tr>
+      <tr>
+        <td>
+          <label for="member_id">{{ tenant.member_label }}</label>
+        </td>
+        <td>
+          <input id="member_id" name="member_id" type="text" size="16" aria-label="{{ tenant.member_label }}">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button type="submit">Search</button>
+          {% if error %}<span class="err">{{ error }}</span>{% endif %}
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Savings</h1>
+<p>Member: {{ member.name }}</p>
+<p>No savings account is present on this membership.</p>
+<p><a href="/{{ tenant.id }}/member/{{ member.member_id }}/accounts">Back to accounts</a></p>
+{% endblock %}

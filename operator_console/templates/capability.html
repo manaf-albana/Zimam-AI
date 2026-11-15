@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block main %}
+<header class="page">
+  <h1>Capability</h1>
+  <p class="lede">Generated from the successful discovery run.</p>
+</header>
+{% if yaml_text %}
+  <pre class="yaml">{{ yaml_text }}</pre>
+{% else %}
+  <div class="empty">No compiled capability yet.</div>
+{% endif %}
+{% endblock %}

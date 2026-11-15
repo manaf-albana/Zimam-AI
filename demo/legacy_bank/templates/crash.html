@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Application error</h1>
+<pre class="crash">ORA-01403: no data found
+at meridianserv.MemberBean.load(MemberBean.java:441)
+Host CICS region CICSPROD abend ASRA
+</pre>
+<p>Hard failure. Do not retry blindly.</p>
+{% endblock %}

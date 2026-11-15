@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block main %}
+<header class="page">
+  <h1>Evals</h1>
+  <p class="lede">20 replay and safety checks</p>
+</header>
+{% if not report %}
+  <div class="empty">Run <code>make eval</code> to populate this view.</div>
+{% elif report.cases is defined %}
+  <p class="summary">
+    Replay model_calls={{ report.model_calls_replay if report.model_calls_replay is defined else 0 }}
+    · Stability N={{ report.stability_n }}
+    · success {{ report.stability_success_rate }}
+    · median {{ report.median_ms }} ms
+    · p95 {{ report.p95_ms }} ms
+  </p>
+  <ol class="eval-rows">
+    {% for row in report.cases %}
+      <li>
+        <span class="eid">{{ row.id }}</span>
+        <span class="ename">{{ row.scenario|capitalize if row.scenario else row.id }}</span>
+        <span class="estatus {% if row.ok %}pass{% else %}fail{% endif %}">{{ "Passed" if row.ok else "Failed" }}</span>
+        <span class="ems">{% if row.ms is defined and row.ms is not none %}{{ row.ms }} ms{% else %}—{% endif %}</span>
+      </li>
+    {% endfor %}
+  </ol>
+{% else %}
+  <dl class="facts">
+    {% for k, v in report.items() %}
+      <div><dt>{{ k }}</dt><dd>{{ v }}</dd></div>
+    {% endfor %}
+  </dl>
+{% endif %}
+{% endblock %}

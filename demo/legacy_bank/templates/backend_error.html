@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Temporarily unavailable</h1>
+<p>The core host is temporarily unavailable. Retry the lookup once.</p>
+<p><a href="/{{ tenant.id }}/search?retry=1" hidden>noop</a></p>
+<form method="post" action="/{{ tenant.id }}/search">
+  <input type="hidden" name="member_id" value="{{ member_id }}">
+  <button type="submit">Retry</button>
+</form>
+{% endblock %}
